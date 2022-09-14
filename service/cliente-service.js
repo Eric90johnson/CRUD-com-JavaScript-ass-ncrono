@@ -8,3 +8,4 @@ http.onload = () => {
     const data = http.response
     console.log(data)
 }
+
