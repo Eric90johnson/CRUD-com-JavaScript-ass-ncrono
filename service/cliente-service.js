@@ -20,13 +20,12 @@ const tabela = document.querySelector('[data-tabela]')
 const listaClientes = () => {  
     return fetch(`http://localhost:3000/profile`)
     .then( resposta => {
-        return resposta.json()
-    })
+        return resposta.json()        
+    })   
 } 
 
 listaClientes()
-.then( data => {    
-        data.forEach(elemento => {
-        tabela.appendChild(criarNovaLinha(elemento.none, elemento.email))
-        })
-})
+.then( data => {
+    data.forEach( elemento => {
+    tabela.appendChild(criarNovaLinha(elemento.nome, elemento.email))
+})})  
